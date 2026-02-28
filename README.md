@@ -2,7 +2,7 @@
 A template for a minimalist academic website. Preview it [here](https://academic-website-one.vercel.app/)!
 
 ## Can I use this?
-Yes! This is available for anyone to use for completely free! I only have one request: I have added a link to the bottom of the website as a way for others to find this template &mdash; **please do not remove this**. Of course I cannot enforce this, so if you feel you must remove it, I only ask that you give credit in some other way.
+Yes! This is available for anyone to use for completely free! I only have one request: I have added a link to the bottom of the website as a way for others to find this template &mdash; **please do not remove this**. Of course I cannot enforce this, so if you feel you must remove it, I only ask that you **give credit in some other way**.
 
 ## Disclaimer
 
