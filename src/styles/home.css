@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+#intro-div p:first-child {
+  margin-top: 0;
+}
+
+
 #profile-pic {
   width: 300px;
   height: 300px;
@@ -96,6 +101,9 @@
   #text-and-icons {
     display: flex;
     flex-direction: column-reverse;
+  }
+  #intro-div p:first-child {
+    margin-top: 1em;
   }
  }
 

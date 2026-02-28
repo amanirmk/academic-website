@@ -9,6 +9,7 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100%;
   overscroll-behavior-y: none;
   font-size: 16px;
 }
