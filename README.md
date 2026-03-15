@@ -75,12 +75,13 @@ You can change content on the news page through the file `/src/content/news_item
 In this file, you define a list of news items, which each look like this:
 ```
 {
+  key: "newsitem-1"
   pic: newsitem_pic,
   year: 2023,
   text_p: <p>text for news item</p>,
 }
 ```
-All fields should be given. Again, pictures should be placed in `/src/media/` and imported at the top of this file. **Note:** Text is given as a `<p>` so that links or other HTML elements can be added. Importantly, the news boxes do not automatically adjust to content size. Please keep your text within the provided space or be prepared to modify the CSS yourself.
+All fields should be given, and the key should be unique. Again, pictures should be placed in `/src/media/` and imported at the top of this file. **Note:** Text is given as a `<p>` so that links or other HTML elements can be added. Importantly, the news boxes do not automatically adjust to content size. Please keep your text within the provided space or be prepared to modify the CSS yourself.
 
 ## Final customizations
 
