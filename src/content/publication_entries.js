@@ -1,15 +1,15 @@
-const preparation = [
+const preprints = [
   {
-    linkhash: "prep-1",
+    linkhash: "preprint-1",
     year: 2028,
     title: "After 10 Submissions to NeurIPS, We Gave Up.",
     author_span: <span>Author, <b>John Doe</b>, Author, Author, and Author</span>,
     paper: "paper1.pdf",
   },
   {
-    linkhash: "prep-2",
+    linkhash: "preprint-2",
     year: 2027,
-    title: "Genuinely Amazing Work that Only Exists on ArXiv.",
+    title: "Genuinely Amazing Work: Stays a Preprint Forever.",
     author_span: <span>Author<sup>&dagger;</sup>, <b>John Doe<sup>&dagger;</sup></b>, Author, Author, Author, and Author</span>,
     paper: "paper1.pdf",
     doi: "https://www.doi.org/",
@@ -60,6 +60,6 @@ const publications = [
 
 // add sections to your publications here
 export const publication_entries = [
+  ["Preprints", preprints],
   ["Publications", publications], 
-  ["In Preparation", preparation],
 ];
