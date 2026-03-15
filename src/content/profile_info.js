@@ -12,7 +12,7 @@ export const introduction = <div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <a href="some-link">ut labore et dolore magna aliqua</a>. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Mattis molestie a iaculis at erat. <a href="some-link">Sit amet mauris commodo quis imperdiet</a>. Non diam phasellus vestibulum lorem.</p>
 </div>;
 
-// icons from fontawesome 6.1.1 (free), or academicons (https://jpswalsh.github.io/academicons/)
+// icons from fontawesome 6.4.2 (free), or academicons (https://jpswalsh.github.io/academicons/)
 export const icons = [
   {
     className: "ai ai-cv",

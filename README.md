@@ -19,31 +19,54 @@ In this file you can change your
 - `introduction`: Describe yourself! Input as a `<div>` of `<p>`s.
 - `icons`: These are links to your CV, Google Scholar, etc. Input as a list of objects containing the `className` for the fontawesome or academicon icon desired, and the `link`. **Note:** Your CV should be placed in `/public/` and linked as `process.env.PUBLIC_URL + '/cv_filename.pdf'`.
 
-## Research page
+## Publications page
 
-You can change content on the research page through the file `/src/content/pub_entries.js`.
+You can change content on the research page through the file `/src/content/publication_entries.js`.
 
 In this file, you define publication entries, which look like this:
 ```
 {
-    year: 2023,
+    linkhash: "pub-2023",
+    year: "2023",
     title: "Paper title.",
     author_span: <span><b>Your Name</b>, Author, Author, and Author</span>,
     location: "Conference / Journal",
-    pdf: "paper.pdf",
+    paper: "paper.pdf",
     doi: "https://www.doi.org/link-to-paper",
     code: "https://github.com/link-to-code",
 }
 ```
-I recommend that all entries have a title and authors, but the other fields are optional. All `pdf`s should be placed in `/public/research/` and match the filename here. **Note:** Authors are given as a `<span>` so that you can bold your own name or add other HTML elements.
-
-These publication entries can then be grouped into lists however you like. The template currently has lists for papers that are published (`publications`) or in prepration (`preparation`). These should then be named and ordered in a manner like below:
+I recommend that all entries have a title, authors, but the other fields are optional. I also recommend setting linkhash, which allows for easy navigation to a specific publication on your page through the URL. All `paper`s should be placed in `/public/publications/` and match the filename here. **Note:** Authors are given as a `<span>` so that you can bold your own name or add other HTML elements. JSX elements can be used for titles and locations as well, if desired. These publication entries can then be grouped into lists however you like. The template currently has lists for papers that are published (`publications`) or in prepration (`preparation`). These should then be named and ordered in a manner like below:
 ```
 export const pub_entries = [
   ["Publications", publications], 
   ["In Preparation", preparation],
 ];
 ```
+
+For convenience, I also provide a simple script to strip all metadata from uploaded PDFs: `strip_pdf_metadata.py`. Do not include this file when hosting your website. Open and see comments for use.
+
+## Presentations page
+
+You can change content on the research page through the file `/src/content/presentation_entries.js`.
+
+This page is nearly identical to the publications page in format, but differs slightly in the content. Presentation entries look like the following:
+```
+{
+  linkhash: "talk-1",
+  pub_linkhash: "pub-2023"
+  date: "03/12/24",
+  title: "Talk title.",
+  venue: "Conference",
+  location: "University or City",
+  is_copresented: false,
+  abstract: "abstract.pdf",
+  poster: "poster.pdf",
+  slides: "slides.pdf"
+  video: "https://www.youtube.com/"
+}
+```
+All presentations should have a date, title, venue, and location. Indicating copresentation and providing a linkhash are recommended. If the talk is associated with a paper on your publications page, then provide the pub_linkhash to facilitate others finding it. Abstracts, posters, and slides should be placed in their corresponding subfolder in `/public/presentations/`.
 
 ## News page
 
@@ -57,7 +80,7 @@ In this file, you define a list of news items, which each look like this:
   text_p: <p>text for news item</p>,
 }
 ```
-All fields should be given. Again, pictures should be placed in `/src/media/` and imported at the top of this file. **Note:** Text is given as a `<p>` so that links or other HTML elements can be added.
+All fields should be given. Again, pictures should be placed in `/src/media/` and imported at the top of this file. **Note:** Text is given as a `<p>` so that links or other HTML elements can be added. Importantly, the news boxes do not automatically adjust to content size. Please keep your text within the provided space or be prepared to modify the CSS yourself.
 
 ## Final customizations
 

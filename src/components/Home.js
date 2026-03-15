@@ -1,13 +1,16 @@
-import React from 'react';
 import { FadeIn } from 'react-slide-fade-in';
 import "../styles/home.css";
 import { name, profile_pic, introduction, icons } from '../content/profile_info.js';
 
 const makeIcon = (icon) => {
   return (
-    <a key={icon.link} className={icon.className.includes("ai ai-") ? "icon ai-icon" : "icon"} href={icon.link}>
-      <i className={icon.className}></i>
-    </a>
+    icon.svg ?  (
+      <a key={icon.link} className="icon" href={icon.link}>{icon.svg}</a>
+    ) : (
+      <a key={icon.link} className={icon.className.includes("ai ai-") ? "icon ai-icon" : "icon"} href={icon.link}>
+        <i className={icon.className}></i>
+      </a>
+    )
   );
 }
 
@@ -31,7 +34,9 @@ const Home = () => {
             {icons.map(makeIcon)}
           </div>
         </div>
-        <img id="profile-pic" alt={name} src={profile_pic}/>
+        <div className="pic-container" id="profile-pic">
+          <img alt={name} src={profile_pic} width="300" height="300" />
+        </div>
       </div>
       </FadeIn>
       </div>

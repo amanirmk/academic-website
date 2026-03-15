@@ -13,15 +13,11 @@
   margin-top: 0;
 }
 
-
 #profile-pic {
   width: 300px;
-  height: 300px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-left: 50px;
   border: 1px solid var(--accent);
-  box-shadow: 0px 0px 5px lightgrey;
+  margin-left: 50px;
 }
 
 #icons {
@@ -30,14 +26,25 @@
 }
 
 .icon {
+  color: var(--hoverColor);
   font-size: 25px;
   text-decoration: none;
-  color: #333333;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 25px;
   margin-top: 10px;
+}
+
+.icon svg {
+  margin-top: -12.5px;
+  width: 48px;
+  height: 48px;
+  fill: var(--accent);
+}
+
+.icon path {
+  fill: var(--accent);
 }
 
 .ai-icon {
@@ -47,49 +54,51 @@
 
 .icon:hover {
   cursor: pointer;
-  color: var(--hoverColor);
 }
 
 .ai-cv {
   margin-top: -1.5px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1325px) {
   #home-div {
     width: 100%;
   }
- }
-
- @media only screen and (max-width: 1020px) {
   #profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 320px;
   }
-  .icon {
+}
+
+@media only screen and (max-width: 1025px) {
+  #profile-pic {
+    width: 275px;
+  }
+   .icon {
     font-size: 20px;
   }
   .ai-icon {
     font-size: 28px;
   }
- }
+  .icon svg {
+    width: 38px;
+    height: 38px;
+    margin-top: -10px;
+  }
+  #text-and-icons p {
+    font-size: 0.9rem;
+  }
+}
 
- @media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
   #intro-div {
     flex-direction: column-reverse;
-    align-items: start;
+    align-items: center;
   }
   #profile-pic {
     margin: 0;
     margin-bottom: 20px;
     margin-top: 10px;
     width: 200px;
-    height: 200px;
-  }
- }
-
- @media only screen and (max-width: 610px) {
-  #intro-div {
-    align-items: center;
   }
   #icons {
     justify-content: center;
@@ -103,16 +112,23 @@
     flex-direction: column-reverse;
   }
   #intro-div p:first-child {
-    margin-top: 1em;
+    margin-top: 1rem;
   }
- }
+}
 
- @media only screen and (max-width: 300px) {
-  #text-and-icons {
-    width: 250px;
-  }
+@media only screen and (max-width: 550px) {
   .icon {
     margin-right: 10px;
     margin-left: 10px;
   }
- }
+}
+
+@media only screen and (max-width: 450px) {
+  .icon {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+  #text-and-icons {
+    width: 330px;
+  }
+}
