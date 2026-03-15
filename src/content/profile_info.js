@@ -1,15 +1,18 @@
-import johndoe_headshot from '../media/johndoe_headshot.png';
+import { Link } from "react-router-dom";
+import headshot from '../media/headshot.jpg';
 
 // any css-accepted format
 export const accent_color = "#A31F34";
 
 export const name = "John Doe";
 
-export const profile_pic = johndoe_headshot;
+export const profile_pic = headshot;
+
+// Use <Link> for internal links and <a> for external links.
 
 export const introduction = <div>
-  <p>Lorem ipsum dolor sit amet, <a href="some-link">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mi proin sed libero enim sed faucibus turpis. Mauris ultrices eros in cursus turpis. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <a href="some-link">ut labore et dolore magna aliqua</a>. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Mattis molestie a iaculis at erat. <a href="some-link">Sit amet mauris commodo quis imperdiet</a>. Non diam phasellus vestibulum lorem.</p>
+  <p>I recently defended my thesis at No-Federal-Funding University, where I spent my entire time following the direction of a <Link to="/publications#pub-3">first-year project</Link> I randomly picked. My research focuses on things that sound impressive at dinner parties but are actually just me staring at error messages until they go away. I collaborate extensively with my rubber duck and occasionally with humans.</p>
+  <p>My academic journey began when I realized I wasn't ready for the real world and discovered that universities will pay you a small but livable wage to have existential crises in their buildings. Before coming to NFFU, I didn't know what I was doing in college, which gave me the confidence to not know what I'm doing in grad school. I am supported by several <a href="https://en.wikipedia.org/wiki/Fellow">fellowships</a> for some mysterious reason.</p>
 </div>;
 
 // icons from fontawesome 6.4.2 (free), or academicons (https://jpswalsh.github.io/academicons/)

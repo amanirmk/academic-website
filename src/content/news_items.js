@@ -1,28 +1,31 @@
-import newsitem_pic from '../media/newsitem_pic.jpg';
+import award_pic from '../media/award.jpg';
+import interview_pic from '../media/interview.gif';
+import conference_pic from '../media/conference.jpg';
+import thesis_pic from '../media/thesis.jpg';
 
 export const news_items = [
   {
     key: "news-item-1",
-    pic: newsitem_pic,
-    year: 2023,
-    text_p: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    pic: thesis_pic,
+    year: 2030,
+    text_p: <p>Defended my thesis after successfully convincing committee that the 'future work' section counts as contributions.</p>
   },
   {
     key: "news-item-2",
-    pic: newsitem_pic,
-    year: 2022,
-    text_p: <p>Congue eu consequat ac felis donec et odio pellentesque diam.</p>
+    pic: award_pic,
+    year: 2025,
+    text_p: <p>Awarded the prestigious 'Still Going Strong' Fellowship for demonstrating exceptional commitment to not graduating yet.</p>
   },
   {
     key: "news-item-3",
-    pic: newsitem_pic,
+    pic: conference_pic,
     year: 2021,
-    text_p: <p>In nibh mauris cursus mattis molestie a iaculis at. Tempor nec feugiat nisl pretium fusce id velit ut tortor.</p>
+    text_p: <p>Attended conference, mostly for the open bar. Also presented poster.</p>
   },
   {
     key: "news-item-4",
-    pic: newsitem_pic,
+    pic: interview_pic,
     year: 2020,
-    text_p: <p>Non sodales neque sodales ut etiam sit amet nisl. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien.</p>
+    text_p: <p>Interviewed by the campus magazine about single-handedly reviving the tradition of leaving work early.</p>
   },
 ];
